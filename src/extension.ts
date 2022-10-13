@@ -30,18 +30,17 @@ async function start(): Promise<void> {
   }
 }
 
-async function getCategorizedSettings(): Promise<any | null> {
+async function getCategorizedSettings(): Promise<ISetting[] | null> {
   return await getSettings();
 }
 
-async function getSettings(): Promise<any> {
+async function getSettings(): Promise<ISetting[] | null> {
   const [defaultsFile] = await Promise.all([
     readFileAsync(resolve(__dirname, '..', 'settings/defaults.json'), 'utf-8')
   ]);
 
   const settings: { [key: string]: any } = rjson.parse(defaultsFile)
-  const settingArr = []
-  Object.keys(settings)
+  const settingArr: ISetting[] = []
 
   for (const key of Object.keys(settings)) {
     settingArr.push({
