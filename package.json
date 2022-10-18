@@ -172,11 +172,6 @@
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
       },
       {
-        "key": "enter",
-        "command": "-renameFile",
-        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-      },
-      {
         "key": "j",
         "command": "list.focusDown",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
@@ -327,11 +322,6 @@
         "key": "ctrl+f",
         "command": "actions.find",
         "when": "editorFocus && replaceInputBoxFocus"
-      },
-      {
-        "key": "ctrl+r",
-        "command": "-editor.action.startFindReplaceAction",
-        "when": "editorFocus || editorIsOpen"
       },
       {
         "key": "q",
@@ -497,6 +487,16 @@
       {
         "key": "ctrl+0",
         "command": "workbench.action.openNextRecentlyUsedEditorInGroup"
+      },
+      {
+        "key": "enter",
+        "command": "-renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+      },
+      {
+        "key": "ctrl+r",
+        "command": "-editor.action.startFindReplaceAction",
+        "when": "editorFocus || editorIsOpen"
       },
       {
         "key": "ctrl+k ctrl+i",
