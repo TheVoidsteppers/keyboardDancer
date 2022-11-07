@@ -1,4 +1,6 @@
 {
+  "editor.lineNumbers": "relative",
+  "editor.cursorSurroundingLines": 200,
   "vim.camelCaseMotion.enable": true,
   "vim.easymotion": true,
   "vim.foldfix": true,
@@ -15,10 +17,7 @@
     "<C-w>": false,
     "<C-y>": false,
     "<C-c>": false,
-    "<C-v>": false,
-    "<C-i>": true,
-    "<C-o>": true,
-    "<C-r>": true
+    "<C-v>": false
   },
   "vim.hlsearch": true,
   "vim.incsearch": true,
@@ -32,28 +31,9 @@
       "after": [
         "<Esc>"
       ]
-    },
-    {
-      "before": [
-        "k",
-        "k"
-      ],
-      "after": [
-        "<Esc>"
-      ]
     }
   ],
-  "vim.insertModeKeyBindingsNonRecursive": [
-    {
-      "before": [
-        "<C-d>"
-      ],
-      "commands": [
-        "editor.action.moveSelectionToNextFindMatch"
-      ],
-      "silent": true
-    }
-  ],
+  "vim.insertModeKeyBindingsNonRecursive": [],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
@@ -199,14 +179,6 @@
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
-    {
-      "before": [
-        "<C-d>"
-      ],
-      "commands": [
-        "editor.action.moveSelectionToNextFindMatch"
-      ]
-    },
     {
       "before": [
         "L"

@@ -314,16 +314,6 @@
         "when": "terminalFocus"
       },
       {
-        "key": "ctrl+f",
-        "command": "editor.action.startFindReplaceAction",
-        "when": "editorFocus && findInputFocussed"
-      },
-      {
-        "key": "ctrl+f",
-        "command": "actions.find",
-        "when": "editorFocus && replaceInputBoxFocus"
-      },
-      {
         "key": "q",
         "command": "workbench.action.toggleSidebarVisibility",
         "when": "sideBarFocus && activeViewlet == 'workbench.view.explorer'"
@@ -471,8 +461,18 @@
         "when": "inSearchEditor"
       },
       {
-        "key": "ctrl+shift+c",
+        "key": "ctrl+m",
         "command": "search.action.focusQueryEditorWidget",
+        "when": "inSearchEditor"
+      },
+      {
+        "key": "ctrl+i",
+        "command": "search.action.focusFilesToInclude",
+        "when": "inSearchEditor"
+      },
+      {
+        "key": "ctrl+e",
+        "command": "search.action.focusFilesToExclude",
         "when": "inSearchEditor"
       },
       {
@@ -540,10 +540,6 @@
         "key": "ctrl+l",
         "command": "-expandLineSelection",
         "when": "textInputFocus"
-      },
-      {
-        "key": "alt+2",
-        "command": "-workbench.action.openEditorAtIndex2"
       },
       {
         "key": "space",
