@@ -413,6 +413,22 @@
         "when": "editorTextFocus && !suggestWidgetVisible && !suggestWidgetVisible && vim.mode == 'Insert'"
       },
       {
+        "key": "ctrl+n",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "editorTextFocus && vim.mode == 'Normal' || editorTextFocus && vim.mode == 'Visual'"
+      },
+      {
+        "key": "ctrl+p",
+        "command": "vim.remap",
+        "when": "vim.mode == 'SearchInProgressMode'",
+        "args": {
+          "after": [
+            "<c-r>",
+            "+"
+          ]
+        }
+      },
+      {
         "key": "f6",
         "command": "workbench.action.debug.stepOver",
         "when": "debugState == 'stopped'"

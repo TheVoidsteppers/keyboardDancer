@@ -14,6 +14,8 @@ If you want to import the extension settings at a later time use the `Keyboard D
 ```json
 
 {
+  "editor.lineNumbers": "relative",
+  "editor.cursorSurroundingLines": 200,
   "vim.camelCaseMotion.enable": true,
   "vim.easymotion": true,
   "vim.foldfix": true,
@@ -30,10 +32,7 @@ If you want to import the extension settings at a later time use the `Keyboard D
     "<C-w>": false,
     "<C-y>": false,
     "<C-c>": false,
-    "<C-v>": false,
-    "<C-i>": true,
-    "<C-o>": true,
-    "<C-r>": true
+    "<C-v>": false
   },
   "vim.hlsearch": true,
   "vim.incsearch": true,
@@ -47,38 +46,10 @@ If you want to import the extension settings at a later time use the `Keyboard D
       "after": [
         "<Esc>"
       ]
-    },
-    {
-      "before": [
-        "k",
-        "k"
-      ],
-      "after": [
-        "<Esc>"
-      ]
     }
   ],
-  "vim.insertModeKeyBindingsNonRecursive": [
-    {
-      "before": [
-        "<C-d>"
-      ],
-      "commands": [
-        "editor.action.moveSelectionToNextFindMatch"
-      ],
-      "silent": true
-    }
-  ],
+  "vim.insertModeKeyBindingsNonRecursive": [],
   "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": [
-        "<leader>",
-        "m"
-      ],
-      "commands": [
-        ":nohl"
-      ]
-    },
     {
       "before": [
         "K"
@@ -102,6 +73,55 @@ If you want to import the extension settings at a later time use the `Keyboard D
       ],
       "after": [
         "^"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "f",
+        "w"
+      ],
+      "after": [
+        "\"",
+        "a",
+        "y",
+        "w",
+        "/",
+        "<c-R>",
+        "a",
+        "<CR>"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<leader>",
+        "e"
+      ],
+      "commands": [
+        "workbench.view.explorer"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<leader>",
+        "o"
+      ],
+      "commands": [
+        "outline.focus",
+        "outline.focus"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<leader>",
+        "h"
+      ],
+      "commands": [
+        ":nohl"
       ]
     },
     {
@@ -162,24 +182,6 @@ If you want to import the extension settings at a later time use the `Keyboard D
       ]
     }
   ],
-  "vim.normalModeKeyBindings": [
-    {
-      "before": [
-        "f",
-        "f"
-      ],
-      "after": [
-        "\"",
-        "a",
-        "y",
-        "w",
-        "/",
-        "<c-R>",
-        "a",
-        "<CR>"
-      ]
-    }
-  ],
   "vim.visualModeKeyBindings": [
     {
       "before": [
@@ -200,7 +202,7 @@ If you want to import the extension settings at a later time use the `Keyboard D
     {
       "before": [
         "f",
-        "f"
+        "w"
       ],
       "after": [
         "\"",
@@ -214,14 +216,6 @@ If you want to import the extension settings at a later time use the `Keyboard D
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
-    {
-      "before": [
-        "<C-d>"
-      ],
-      "commands": [
-        "editor.action.moveSelectionToNextFindMatch"
-      ]
-    },
     {
       "before": [
         "L"
