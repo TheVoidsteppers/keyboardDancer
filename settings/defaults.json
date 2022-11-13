@@ -324,6 +324,12 @@
       "key": "r",
       "name": "Reopen Closed Editor",
       "type": "command"
+    },
+    {
+      "command": "editor.action.toggleMinimap",
+      "key": "m",
+      "name": "Toggle Minimap",
+      "type": "command"
     }
   ]
 }
