@@ -326,6 +326,12 @@
       "type": "command"
     },
     {
+      "command": "workbench.action.closeOtherEditors",
+      "key": "c",
+      "name": "Close Other Tabs",
+      "type": "command"
+    },
+    {
       "command": "editor.action.toggleMinimap",
       "key": "m",
       "name": "Toggle Minimap",
