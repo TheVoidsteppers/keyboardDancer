@@ -314,11 +314,6 @@
         "when": "terminalFocus"
       },
       {
-        "key": "q",
-        "command": "workbench.action.toggleSidebarVisibility",
-        "when": "sideBarFocus && activeViewlet == 'workbench.view.explorer'"
-      },
-      {
         "key": "ctrl+p",
         "command": "workbench.action.togglePanel"
       },

@@ -1,10 +1,11 @@
 {
+  "workbench.editor.openPositioning": "last",
   "editor.lineNumbers": "relative",
-  "editor.cursorSurroundingLines": 200,
+  "editor.cursorSurroundingLines": 10,
   "vim.camelCaseMotion.enable": true,
   "vim.easymotion": true,
   "vim.foldfix": true,
-  "vim.sneak": false,
+  "vim.sneak": true,
   "vim.surround": true,
   "vim.useCtrlKeys": true,
   "vim.useSystemClipboard": true,
@@ -22,17 +23,7 @@
   "vim.hlsearch": true,
   "vim.incsearch": true,
   "vim.leader": "<space>",
-  "vim.insertModeKeyBindings": [
-    {
-      "before": [
-        "j",
-        "j"
-      ],
-      "after": [
-        "<Esc>"
-      ]
-    }
-  ],
+  "vim.insertModeKeyBindings": [],
   "vim.insertModeKeyBindingsNonRecursive": [],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
@@ -82,6 +73,48 @@
     {
       "before": [
         "<leader>",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<leader>",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.gotoSymbol"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<leader>",
+        "w"
+      ],
+      "commands": [
+        "search.action.openEditor"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<leader>",
+        "j"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "/"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<leader>",
         "e"
       ],
       "commands": [
@@ -111,6 +144,7 @@
     },
     {
       "before": [
+        "<leader>",
         "<leader>",
         "f"
       ],
@@ -219,6 +253,7 @@
     },
     {
       "before": [
+        "<leader>",
         "<leader>",
         "f"
       ],
