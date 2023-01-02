@@ -180,6 +180,16 @@ If you want to import the extension settings at a later time use the `Keyboard D
       "commands": [
         "cursorUndo"
       ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "<leader>",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.editor.changeLanguageMode"
+      ]
     }
   ],
   "vim.visualModeKeyBindings": [
