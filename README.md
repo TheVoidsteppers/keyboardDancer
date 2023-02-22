@@ -107,6 +107,16 @@ If you want to import the extension settings at a later time use the `Keyboard D
     {
       "before": [
         "<leader>",
+        "v"
+      ],
+      "commands": [
+        "workbench.action.toggleSidebarVisibility"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<leader>",
         "o"
       ],
       "commands": [
