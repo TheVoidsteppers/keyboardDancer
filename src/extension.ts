@@ -5,12 +5,13 @@ import * as rjson from 'relaxed-json';
 import { resolve } from 'path';
 
 export async function activate(context: vscode.ExtensionContext): Promise<void> {
-  context.globalState.setKeysForSync(['alreadyPrompted']);
+  context.globalState.setKeysForSync(['keyboardDancerVersion']);
   context.subscriptions.push(vscode.commands.registerCommand('extension.importFromKeyboardDancer', () => start()));
-  const hasPrompted = context.globalState.get('alreadyPrompted') || false;
-  if (!hasPrompted) {
+  const lastVersion = context.globalState.get('keyboardDancerVersion') || '';
+  const currentVersion = context.extension.packageJSON.version
+  if (lastVersion !== currentVersion) {
     await showPrompt();
-    await context.globalState.update('alreadyPrompted', true);
+    await context.globalState.update('keyboardDancerVersion', currentVersion);
   }
 }
 
