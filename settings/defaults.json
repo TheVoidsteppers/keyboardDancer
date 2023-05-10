@@ -28,10 +28,19 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
-        "K"
+        "J"
       ],
       "commands": [
         "lineBreakInsert"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "K"
+      ],
+      "after": [
+        "J"
       ],
       "silent": true
     },
