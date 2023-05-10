@@ -14,12 +14,13 @@ If you want to import the extension settings at a later time use the `Keyboard D
 ```json
 
 {
+  "workbench.editor.openPositioning": "last",
   "editor.lineNumbers": "relative",
-  "editor.cursorSurroundingLines": 200,
+  "editor.cursorSurroundingLines": 10,
   "vim.camelCaseMotion.enable": true,
   "vim.easymotion": true,
   "vim.foldfix": true,
-  "vim.sneak": false,
+  "vim.sneak": true,
   "vim.surround": true,
   "vim.useCtrlKeys": true,
   "vim.useSystemClipboard": true,
@@ -37,25 +38,24 @@ If you want to import the extension settings at a later time use the `Keyboard D
   "vim.hlsearch": true,
   "vim.incsearch": true,
   "vim.leader": "<space>",
-  "vim.insertModeKeyBindings": [
-    {
-      "before": [
-        "j",
-        "j"
-      ],
-      "after": [
-        "<Esc>"
-      ]
-    }
-  ],
+  "vim.insertModeKeyBindings": [],
   "vim.insertModeKeyBindingsNonRecursive": [],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
-        "K"
+        "J"
       ],
       "commands": [
         "lineBreakInsert"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "K"
+      ],
+      "after": [
+        "J"
       ],
       "silent": true
     },
@@ -91,6 +91,48 @@ If you want to import the extension settings at a later time use the `Keyboard D
         "<c-R>",
         "a",
         "<CR>"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<leader>",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<leader>",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.gotoSymbol"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<leader>",
+        "w"
+      ],
+      "commands": [
+        "search.action.openEditor"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<leader>",
+        "j"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "/"
       ],
       "silent": true
     },
@@ -136,6 +178,7 @@ If you want to import the extension settings at a later time use the `Keyboard D
     },
     {
       "before": [
+        "<leader>",
         "<leader>",
         "f"
       ],
@@ -255,6 +298,7 @@ If you want to import the extension settings at a later time use the `Keyboard D
     {
       "before": [
         "<leader>",
+        "<leader>",
         "f"
       ],
       "commands": [
@@ -358,6 +402,18 @@ If you want to import the extension settings at a later time use the `Keyboard D
       "command": "workbench.action.reopenClosedEditor",
       "key": "r",
       "name": "Reopen Closed Editor",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.closeOtherEditors",
+      "key": "c",
+      "name": "Close Other Tabs",
+      "type": "command"
+    },
+    {
+      "command": "editor.action.toggleMinimap",
+      "key": "m",
+      "name": "Toggle Minimap",
       "type": "command"
     }
   ]
