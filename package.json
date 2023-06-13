@@ -314,10 +314,6 @@
         "when": "terminalFocus"
       },
       {
-        "key": "ctrl+p",
-        "command": "workbench.action.togglePanel"
-      },
-      {
         "key": "tab",
         "command": "extension.vim_tab",
         "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && editorLangId != 'magit'"
@@ -446,11 +442,6 @@
         "key": "alt+n",
         "command": "workbench.action.files.newUntitledFile",
         "when": "editorFocus && vim.mode == 'Normal'"
-      },
-      {
-        "key": "ctrl+oem_3",
-        "command": "whichkey.show",
-        "when": "!inputFocus"
       },
       {
         "key": "alt+backspace",
@@ -670,11 +661,6 @@
         "when": "editorTextFocus && vim.active && !inDebugRepl"
       },
       {
-        "key": "ctrl+oem_3",
-        "command": "-workbench.action.terminal.toggleTerminal",
-        "when": "terminal.active"
-      },
-      {
         "key": "f1",
         "command": "-workbench.action.showCommands"
       },
@@ -682,6 +668,10 @@
         "key": "ctrl+j",
         "command": "-extension.vim_ctrl+j",
         "when": "editorTextFocus && vim.active && vim.use<C-j> && !inDebugRepl"
+      },
+      {
+        "key": "ctrl+j",
+        "command": "-workbench.action.togglePanel"
       },
       {
         "key": "ctrl+b",
