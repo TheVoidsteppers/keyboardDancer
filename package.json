@@ -304,11 +304,6 @@
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
       },
       {
-        "key": "ctrl+\\",
-        "command": "workbench.action.terminal.toggleTerminal",
-        "when": "terminal.active"
-      },
-      {
         "key": "ctrl+m",
         "command": "workbench.action.toggleMaximizedPanel",
         "when": "terminalFocus"
@@ -316,27 +311,7 @@
       {
         "key": "tab",
         "command": "extension.vim_tab",
-        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && editorLangId != 'magit'"
-      },
-      {
-        "key": "x",
-        "command": "magit.discard-at-point",
-        "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-      },
-      {
-        "key": "-",
-        "command": "magit.reverse-at-point",
-        "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-      },
-      {
-        "key": "shift+-",
-        "command": "magit.reverting",
-        "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-      },
-      {
-        "key": "shift+o",
-        "command": "magit.resetting",
-        "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
       },
       {
         "key": "ctrl+j",
@@ -444,10 +419,6 @@
         "when": "editorFocus && vim.mode == 'Normal'"
       },
       {
-        "key": "alt+backspace",
-        "command": "git.stageChange"
-      },
-      {
         "key": "ctrl+n",
         "command": "editor.action.triggerParameterHints",
         "when": "editorHasSignatureHelpProvider && editorTextFocus"
@@ -481,14 +452,6 @@
         "key": "enter",
         "command": "editor.action.revealDefinition",
         "when": "inSearchEditor"
-      },
-      {
-        "key": "ctrl+9",
-        "command": "workbench.action.openPreviousRecentlyUsedEditorInGroup"
-      },
-      {
-        "key": "ctrl+0",
-        "command": "workbench.action.openNextRecentlyUsedEditorInGroup"
       },
       {
         "key": "enter",
@@ -577,34 +540,6 @@
         "key": "tab",
         "command": "-extension.vim_tab",
         "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
-      },
-      {
-        "key": "k",
-        "command": "-magit.discard-at-point"
-      },
-      {
-        "key": "v",
-        "command": "-magit.reverse-at-point"
-      },
-      {
-        "key": "shift+v",
-        "command": "-magit.reverting"
-      },
-      {
-        "key": "shift+x",
-        "command": "-magit.resetting"
-      },
-      {
-        "key": "x",
-        "command": "-magit.reset-mixed"
-      },
-      {
-        "key": "ctrl+u x",
-        "command": "-magit.reset-hard"
-      },
-      {
-        "key": "y",
-        "command": "-magit.show-refs"
       },
       {
         "key": "f8",
