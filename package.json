@@ -36,7 +36,9 @@
   ],
   "activationEvents": [
     "*",
-    "onCommand:extension.importFromKeyboardDancer"
+    "onCommand:extension.keyboardDancer.importFromKeyboardDancer",
+    "onCommand:extension.keyboardDancer.console.log.variable",
+    "onCommand:extension.keyboardDancer.console.log.string"
   ],
   "main": "./dist/extension.js",
   "browser": "./dist/web/extension.js",
@@ -45,15 +47,23 @@
     "menus": {
       "commandPalette": [
         {
-          "command": "extension.importFromKeyboardDancer",
+          "command": "extension.keyboardDancer.importFromKeyboardDancer",
           "when": ""
         }
       ]
     },
     "commands": [
       {
-        "command": "extension.importFromKeyboardDancer",
+        "command": "extension.keyboardDancer.importFromKeyboardDancer",
         "title": "Keyboard Dancer Keymap: Import Keyboard Dancer Settings"
+      },
+      {
+        "command": "extension.keyboardDancer.console.log.variable",
+        "title": "Wrap down console.log as variable"
+      },
+      {
+        "command": "extension.keyboardDancer.console.log.string",
+        "title": "Wrap down console.log as string"
       }
     ],
     "keybindings": [
@@ -612,7 +622,25 @@
         "key": "ctrl+b",
         "command": "-workbench.action.toggleSidebarVisibility"
       }
-    ]
+    ],
+    "configuration": {
+      "id": "keyboardDancer",
+      "title": "Keyboard Dancer",
+      "type": "object",
+      "properties": {
+        "keyboard-dancer.console.log.functionName": {
+          "markdownDescription": "Defines the function to use for default logging with no arguments. See also [`Log String`](#wrap-console-log.format.text.logString).",
+          "type": "string",
+          "default": "console.log",
+          "pattern": "^[a-zA-Z.-]+$"
+        },
+        "keyboard-dancer.console.log.format": {
+          "markdownDescription": "Enables custom control of the default log string. Use `$functoin` to specify the function name defined by [`Log Function`](#wrap-console-log.format.text.textFunction) and `$var` to specify the variable/text to log. `$var` can be specified **one** or **multible** times. ",
+          "type": "string",
+          "default": "$functoin($var)"
+        }
+      }
+    }
   },
   "extensionDependencies": [
     "vscodevim.vim",
