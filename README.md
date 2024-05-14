@@ -9,10 +9,18 @@ This extension ports customize Vim keyboard shortcuts to Visual Studio Code.
 The first time the extension is launched a prompt is shown that lets you import the extension setttings.
 If you want to import the extension settings at a later time use the `Keyboard Dancer Keymap: Import Keyboard Dancer Setting` command from the Command Palette
 
+# Configuration
+
+```json
+{
+  "keyboard-dancer.console.log.functionName": "console.log",
+  "keyboard-dancer.console.log.format": "$functoin($var)",
+}
+```
+
 ## Keyboard Dancer settings
 
 ```json
-
 {
   "workbench.editor.openPositioning": "last",
   "editor.lineNumbers": "relative",
@@ -40,42 +48,6 @@ If you want to import the extension settings at a later time use the `Keyboard D
   "vim.leader": "<space>",
   "vim.insertModeKeyBindings": [],
   "vim.insertModeKeyBindingsNonRecursive": [],
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": [
-        "J"
-      ],
-      "commands": [
-        "lineBreakInsert"
-      ],
-      "silent": true
-    },
-    {
-      "before": [
-        "K"
-      ],
-      "after": [
-        "J"
-      ],
-      "silent": true
-    },
-    {
-      "before": [
-        "L"
-      ],
-      "after": [
-        "$"
-      ]
-    },
-    {
-      "before": [
-        "H"
-      ],
-      "after": [
-        "^"
-      ]
-    }
-  ],
   "vim.normalModeKeyBindings": [
     {
       "before": [
@@ -243,6 +215,60 @@ If you want to import the extension settings at a later time use the `Keyboard D
       "commands": [
         "workbench.action.editor.changeLanguageMode"
       ]
+    },
+    {
+      "before": [
+        "l",
+        "v"
+      ],
+      "commands": [
+        "extension.keyboardDancer.console.log.variable"
+      ]
+    },
+    {
+      "before": [
+        "l",
+        "s"
+      ],
+      "commands": [
+        "extension.keyboardDancer.console.log.string"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "J"
+      ],
+      "commands": [
+        "lineBreakInsert"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "K"
+      ],
+      "after": [
+        "J"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
+      ]
+    },
+    {
+      "before": [
+        "H"
+      ],
+      "after": [
+        "^"
+      ]
     }
   ],
   "vim.visualModeKeyBindings": [
@@ -275,6 +301,24 @@ If you want to import the extension settings at a later time use the `Keyboard D
         "<c-R>",
         "a",
         "<CR>"
+      ]
+    },
+    {
+      "before": [
+        "l",
+        "v"
+      ],
+      "commands": [
+        "extension.keyboardDancer.console.log.variable"
+      ]
+    },
+    {
+      "before": [
+        "l",
+        "s"
+      ],
+      "commands": [
+        "extension.keyboardDancer.console.log.string"
       ]
     }
   ],

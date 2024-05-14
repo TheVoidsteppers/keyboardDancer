@@ -25,42 +25,6 @@
   "vim.leader": "<space>",
   "vim.insertModeKeyBindings": [],
   "vim.insertModeKeyBindingsNonRecursive": [],
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": [
-        "J"
-      ],
-      "commands": [
-        "lineBreakInsert"
-      ],
-      "silent": true
-    },
-    {
-      "before": [
-        "K"
-      ],
-      "after": [
-        "J"
-      ],
-      "silent": true
-    },
-    {
-      "before": [
-        "L"
-      ],
-      "after": [
-        "$"
-      ]
-    },
-    {
-      "before": [
-        "H"
-      ],
-      "after": [
-        "^"
-      ]
-    }
-  ],
   "vim.normalModeKeyBindings": [
     {
       "before": [
@@ -228,6 +192,60 @@
       "commands": [
         "workbench.action.editor.changeLanguageMode"
       ]
+    },
+    {
+      "before": [
+        "l",
+        "v"
+      ],
+      "commands": [
+        "extension.keyboardDancer.console.log.variable"
+      ]
+    },
+    {
+      "before": [
+        "l",
+        "s"
+      ],
+      "commands": [
+        "extension.keyboardDancer.console.log.string"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "J"
+      ],
+      "commands": [
+        "lineBreakInsert"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "K"
+      ],
+      "after": [
+        "J"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
+      ]
+    },
+    {
+      "before": [
+        "H"
+      ],
+      "after": [
+        "^"
+      ]
     }
   ],
   "vim.visualModeKeyBindings": [
@@ -260,6 +278,24 @@
         "<c-R>",
         "a",
         "<CR>"
+      ]
+    },
+    {
+      "before": [
+        "l",
+        "v"
+      ],
+      "commands": [
+        "extension.keyboardDancer.console.log.variable"
+      ]
+    },
+    {
+      "before": [
+        "l",
+        "s"
+      ],
+      "commands": [
+        "extension.keyboardDancer.console.log.string"
       ]
     }
   ],
