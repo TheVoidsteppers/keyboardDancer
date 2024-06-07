@@ -34,6 +34,12 @@
   "categories": [
     "Keymaps"
   ],
+  "activationEvents": [
+    "*",
+    "onCommand:extension.keyboardDancer.importFromKeyboardDancer",
+    "onCommand:extension.keyboardDancer.console.log.variable",
+    "onCommand:extension.keyboardDancer.console.log.string"
+  ],
   "main": "./dist/extension.js",
   "browser": "./dist/web/extension.js",
   "preview": false,
