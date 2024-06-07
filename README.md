@@ -58,6 +58,7 @@ If you want to import the extension settings at a later time use the `Keyboard D
         "\"",
         "a",
         "y",
+        "i",
         "w",
         "/",
         "<c-R>",
