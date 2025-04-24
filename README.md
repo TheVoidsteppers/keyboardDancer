@@ -308,6 +308,7 @@ If you want to import the extension settings at a later time use the `Keyboard D
     },
     {
       "before": [
+        "<leader>",
         "l",
         "v"
       ],
@@ -317,6 +318,7 @@ If you want to import the extension settings at a later time use the `Keyboard D
     },
     {
       "before": [
+        "<leader>",
         "l",
         "s"
       ],
