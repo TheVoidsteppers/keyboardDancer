@@ -183,16 +183,6 @@
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
       },
       {
-        "key": "ctrl+j",
-        "command": "selectNextSuggestion",
-        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-      },
-      {
-        "key": "ctrl+k",
-        "command": "selectPrevSuggestion",
-        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-      },
-      {
         "key": "ctrl+k",
         "command": "workbench.action.quickOpenNavigatePrevious",
         "when": "inQuickOpen"
@@ -324,20 +314,20 @@
         "command": "workbench.action.quickOpenSelectPrevious",
         "when": "inQuickOpen"
       },
-      {
+            {
         "key": "ctrl+j",
         "command": "selectNextSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
       },
       {
         "key": "ctrl+k",
         "command": "selectPrevSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
       },
       {
         "key": "ctrl+l",
         "command": "acceptSelectedSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
       },
       {
         "key": "ctrl+j",
