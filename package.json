@@ -170,7 +170,7 @@
       {
         "key": "r",
         "command": "renameFile",
-        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
       },
       {
         "key": "j",
